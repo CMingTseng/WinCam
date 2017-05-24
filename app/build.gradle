@@ -16,19 +16,6 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            java.srcDirs = ['src/main']
-            assets.srcDirs = ['assets']
-            jniLibs.srcDirs = ['libs']
-        }
-
-        Kalay_Car {
-            java.srcDirs = ['src/Kalay_Car']
-            jniLibs.srcDirs = ['libs/Kalay_Car']
-        }
-    }
-
     packagingOptions {
         pickFirst 'META-INF/LICENSE.txt'
         pickFirst 'META-INF/NOTICE.txt'
