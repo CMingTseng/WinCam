@@ -1,5 +1,2 @@
-include ':jakewharton'
 include ':AVIOCTRLDEF:AVIOCtrlDefine'
-include ':actionbarsherlocklibrary'
-include ':IOTCamViewer'
-include ':SlidingMenulibrary'
+include ':app'
