@@ -77,9 +77,9 @@ dependencies {
     compile 'com.actionbarsherlock:actionbarsherlock:0.0.1'
     compile 'com.viewpagerindicator:viewpagerindicator:0.0.1'
     compile 'com.slidingmenu:slidingmenu:0.0.1'
-    compile project(':AVIOCTRLDEF:AVIOCtrlDefine')
+    compile 'com.androidwheel:androidwheel:0.0.1'
     compile('com.crashlytics.sdk.android:crashlytics:2.4.0@aar') {
         transitive = true;
     }
-    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.google.android.gms:play-services-gcm:8.1.0'
 }
