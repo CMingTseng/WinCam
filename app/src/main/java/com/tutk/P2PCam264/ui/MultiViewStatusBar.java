@@ -5,9 +5,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tutk.IOTC.Monitor;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.fragment.LiveviewFragment;
 import com.tutk.P2PCam264.DELUX.structure.DeviceInfo;
+import com.tutk.P2PCam264.R;
 
 public class MultiViewStatusBar {
 

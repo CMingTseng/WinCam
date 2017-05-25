@@ -19,8 +19,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.tutk.IOTC.AVIOCTRLDEFs;
-import com.tutk.Kalay.general.R;
-import com.tutk.util.appteam.WifiAdmin;
+import com.tutk.P2PCam264.R;
+import com.tutk.P2PCam264.util.appteam.WifiAdmin;
 
 import java.util.List;
 

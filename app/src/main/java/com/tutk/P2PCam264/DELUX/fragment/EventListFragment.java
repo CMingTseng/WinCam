@@ -50,13 +50,12 @@ import com.tutk.IOTC.IOTCAPIs;
 import com.tutk.IOTC.IRegisterIOTCListener;
 import com.tutk.IOTC.LargeDownloadListener;
 import com.tutk.IOTC.st_LanSearchInfo2;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.activity.MultiViewActivity;
 import com.tutk.P2PCam264.DELUX.activity.RemoteFileActivity;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_OkCancle_Dialog;
 import com.tutk.P2PCam264.ui.RefreshableView;
-import com.tutk.util.command.CustomCommand;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -1398,7 +1397,7 @@ public class EventListFragment extends Fragment implements IRegisterIOTCListener
                 for (int i = 0; i < list.size(); i++) {
                     if (list.get(i).mIsSelect) {
                         String req = "custom=1&cmd=4003&str=" + list.get(i).path;
-                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ, CustomCommand.SMsgAVIoctrlWifiCmdReq
+                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq
                                 .parseContent(mCameraChannel, 0, 0, 4003, 1, 0, req.length(), req));
 
                         list.remove(i);

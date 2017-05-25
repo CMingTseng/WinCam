@@ -23,11 +23,10 @@ import com.tutk.IOTC.Camera;
 import com.tutk.IOTC.IRegisterIOTCListener;
 import com.tutk.IOTC.LargeDownloadListener;
 import com.tutk.IOTC.Packet;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.fragment.PhotoListFragment;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_OkCancle_Dialog;
-import com.tutk.util.command.CustomCommand;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
@@ -157,8 +156,8 @@ public class ViewRemotePhotoActivity extends Activity implements IRegisterIOTCLi
         }
 
         if (mCamera != null) {
-            mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_IPCAM_DOWNLOAD_FILE_REQ,
-                    CustomCommand.SMsgAVIoctrlDownloadReq.parseContent(mCameraChannel, path, CustomCommand.AVIOCTRL_VIEW_FILE));
+            mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_IPCAM_DOWNLOAD_FILE_REQ,
+                    AVIOCTRLDEFs.SMsgAVIoctrlDownloadReq.parseContent(mCameraChannel, path, AVIOCTRLDEFs.AVIOCTRL_VIEW_FILE));
         }
     }
 
@@ -202,10 +201,10 @@ public class ViewRemotePhotoActivity extends Activity implements IRegisterIOTCLi
     public void receiveIOCtrlData(Camera camera, int avChannel, int avIOCtrlMsgType, byte[] data) {
         if (mCamera == camera) {
             switch (avIOCtrlMsgType) {
-                case CustomCommand.IOTYPE_USER_IPCAM_DOWNLOAD_FILE_RESP:
+                case AVIOCTRLDEFs.IOTYPE_USER_IPCAM_DOWNLOAD_FILE_RESP:
                     int ch = Packet.byteArrayToInt_Little(data, 4);
 
-                    if (data[8] == CustomCommand.AVIOCTRL_VIEW_FILE) {
+                    if (data[8] == AVIOCTRLDEFs.AVIOCTRL_VIEW_FILE) {
                         mCamera.StartLargeDownload(ch, ViewRemotePhotoActivity.this);
                     }
                     break;
@@ -294,8 +293,8 @@ public class ViewRemotePhotoActivity extends Activity implements IRegisterIOTCLi
                 break;
             case Remove:
                 String req = "custom=1&cmd=4003&str=" + photo_list.get(mCurrentPos).path;
-                mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ,
-                        CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent(mCameraChannel, 0, 0, 4003, 1, 0, req.length(), req));
+                mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ,
+                        AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent(mCameraChannel, 0, 0, 4003, 1, 0, req.length(), req));
 
                 int remove_pos = mCurrentPos;
 

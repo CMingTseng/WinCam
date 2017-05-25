@@ -7,7 +7,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.tutk.Kalay.general.R;
+import com.tutk.P2PCam264.R;
+
 
 /**
  * Created by James Huang on 2015/4/2.

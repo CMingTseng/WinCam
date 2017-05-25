@@ -36,13 +36,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tutk.IOTC.AVIOCTRLDEFs;
-import com.tutk.Kalay.general.R;
 import com.tutk.Logger.Glog;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_Ok_Dialog;
-import com.tutk.util.DatabaseManager;
-import com.tutk.util.EasyWiFiSetting;
-import com.tutk.util.ThreadTPNS;
-import com.tutk.util.appteam.WifiAdmin;
+import com.tutk.P2PCam264.util.DatabaseManager;
+import com.tutk.P2PCam264.util.EasyWiFiSetting;
+import com.tutk.P2PCam264.util.ThreadTPNS;
+import com.tutk.P2PCam264.util.appteam.WifiAdmin;
 
 import java.io.BufferedInputStream;
 import java.io.File;

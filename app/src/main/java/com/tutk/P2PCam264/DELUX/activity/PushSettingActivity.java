@@ -9,7 +9,8 @@ import android.view.KeyEvent;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.tutk.Kalay.general.R;
+import com.tutk.P2PCam264.R;
+
 
 public class PushSettingActivity extends Activity {
 

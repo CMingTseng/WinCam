@@ -12,12 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tutk.IOTC.IRegisterIOTCListener;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.activity.MultiViewActivity;
 import com.tutk.P2PCam264.DELUX.livaviewFragmentAdapter;
 import com.tutk.P2PCam264.DELUX.structure.Chaanel_to_Monitor_Info;
 import com.tutk.P2PCam264.MyCamera;
-import com.tutk.util.DatabaseManager;
+import com.tutk.P2PCam264.R;
+import com.tutk.P2PCam264.util.DatabaseManager;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;

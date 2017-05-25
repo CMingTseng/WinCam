@@ -11,14 +11,14 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.tutk.IOTC.AVIOCTRLDEFs;
-import com.tutk.Kalay.general.R;
 import com.tutk.Logger.Glog;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_Ok_Dialog;
 import com.tutk.P2PCam264.ui.Custom_Ok_Dialog.DialogListener;
-import com.tutk.util.CheckDevListener;
-import com.tutk.util.EasyWiFiSetting;
-import com.tutk.util.appteam.WifiAdmin;
+import com.tutk.P2PCam264.util.CheckDevListener;
+import com.tutk.P2PCam264.util.EasyWiFiSetting;
+import com.tutk.P2PCam264.util.appteam.WifiAdmin;
 
 public class AddDeviceCheckActivity extends Activity implements DialogListener, CheckDevListener {
 

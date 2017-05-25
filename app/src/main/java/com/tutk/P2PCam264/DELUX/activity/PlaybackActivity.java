@@ -38,8 +38,8 @@ import com.tutk.IOTC.LargeDownloadListener;
 import com.tutk.IOTC.MediaCodecListener;
 import com.tutk.IOTC.MediaCodecMonitor;
 import com.tutk.IOTC.Packet;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_OkCancle_Dialog;
 
 import java.io.File;

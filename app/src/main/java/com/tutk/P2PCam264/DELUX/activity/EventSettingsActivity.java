@@ -15,9 +15,9 @@ import android.widget.TextView;
 
 import com.tutk.IOTC.AVIOCTRLDEFs;
 import com.tutk.IOTC.Camera;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.structure.DeviceInfo;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 
 public class EventSettingsActivity extends Activity {
 

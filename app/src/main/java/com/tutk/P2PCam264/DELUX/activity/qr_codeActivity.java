@@ -22,13 +22,13 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
 
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_Ok_Dialog;
-import com.tutk.util.zxing.CameraManager;
-import com.tutk.util.zxing.CaptureActivityHandler;
-import com.tutk.util.zxing.InactivityTimer;
-import com.tutk.util.zxing.ViewfinderView;
+import com.tutk.P2PCam264.util.zxing.CameraManager;
+import com.tutk.P2PCam264.util.zxing.CaptureActivityHandler;
+import com.tutk.P2PCam264.util.zxing.InactivityTimer;
+import com.tutk.P2PCam264.util.zxing.ViewfinderView;
 
 import java.io.IOException;
 import java.util.Vector;

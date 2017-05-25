@@ -8,7 +8,8 @@ import android.widget.TextView;
 
 import com.tutk.IOTC.AVAPIs;
 import com.tutk.IOTC.IOTCAPIs;
-import com.tutk.Kalay.general.R;
+import com.tutk.P2PCam264.R;
+
 
 public class AboutActivity extends Activity {
 

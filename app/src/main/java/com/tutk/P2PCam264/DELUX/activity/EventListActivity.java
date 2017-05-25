@@ -50,8 +50,8 @@ import com.tutk.IOTC.AVIOCTRLDEFs.SStreamDef;
 import com.tutk.IOTC.AVIOCTRLDEFs.STimeDay;
 import com.tutk.IOTC.Camera;
 import com.tutk.IOTC.IRegisterIOTCListener;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.RefreshableView;
 
 import java.text.SimpleDateFormat;

@@ -20,9 +20,9 @@ import android.widget.TextView;
 
 import com.tutk.IOTC.AVIOCTRLDEFs;
 import com.tutk.IOTC.Camera;
-import com.tutk.Kalay.general.R;
 import com.tutk.Logger.Glog;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_Pwd_Dialog;
 import com.tutk.P2PCam264.ui.Custom_Pwd_Dialog.PwdDialogListener;
 

@@ -13,7 +13,7 @@ import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import com.tutk.Kalay.general.R;
+import com.tutk.P2PCam264.R;
 
 import java.io.IOException;
 import java.io.InputStream;

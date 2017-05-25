@@ -52,14 +52,13 @@ import com.tutk.IOTC.MediaCodecMonitor;
 import com.tutk.IOTC.MonitorClickListener;
 import com.tutk.IOTC.Packet;
 import com.tutk.IOTC.St_SInfo;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.structure.DeviceInfo;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.mySwitch;
 import com.tutk.P2PCam264.ui.mySwitchButton;
-import com.tutk.util.Convert;
-import com.tutk.util.DatabaseManager;
-import com.tutk.util.command.CustomCommand;
+import com.tutk.P2PCam264.util.Convert;
+import com.tutk.P2PCam264.util.DatabaseManager;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -1887,15 +1886,15 @@ public class LiveViewActivity extends SherlockActivity implements ViewSwitcher.V
                         Log.d(TAG, " turn on ");
                         String req = "custom=1&cmd=2004&par=1";
 //                        String req = "custom=1&cmd=2004&par=0";
-                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ,
-                                CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent(mSelectedChannel, 0, 0, 2004, 1, 0, req.length(), req));
+                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ,
+                                AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent(mSelectedChannel, 0, 0, 2004, 1, 0, req.length(), req));
                         Log.d(TAG, "custom command  : " + req);
 //                        req = "custom=1&cmd=3014";//FIXME not work ?!!!
 //                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent
 //                                (0, 0, 0, 3014, 1, 0, req.length(), req));
 //                        Log.d(TAG, "custom command  : " + req);
                         req = "custom=1&cmd=2020";
-                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ, CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent
+                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent
                                 (mSelectedChannel, 0, 0, 2020, 1, 0, req.length(), req));
                         Log.d(TAG, "custom command  : " + req);
                     }
@@ -1905,15 +1904,15 @@ public class LiveViewActivity extends SherlockActivity implements ViewSwitcher.V
                         Log.d(TAG, " turn off ");
                         String req = "custom=1&cmd=2004&par=0";
 //                        String req = "custom=1&cmd=2004&par=1";
-                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ,
-                                CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent(mSelectedChannel, 0, 0, 2004, 1, 0, req.length(), req));
+                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ,
+                                AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent(mSelectedChannel, 0, 0, 2004, 1, 0, req.length(), req));
                         Log.d(TAG, "custom command  : " + req);
 //                        req = "custom=1&cmd=3014";//FIXME not work ?!!!
 //                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent
 //                                (0, 0, 0, 3014, 1, 0, req.length(), req));
 //                        Log.d(TAG, "custom command  : " + req);
                         req = "custom=1&cmd=2020";
-                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ, CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent
+                        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent
                                 (mSelectedChannel, 0, 0, 2020, 1, 0, req.length(), req));
                         Log.d(TAG, "custom command  : " + req);
                     }
@@ -1936,8 +1935,8 @@ public class LiveViewActivity extends SherlockActivity implements ViewSwitcher.V
                         mIsLapsing = false;
                         req = "custom=1&cmd=2019&par=0";
                     }
-                    mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ,
-                            CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent(mSelectedChannel, 0, 0, 2019, 1, 0, req.length(), req));
+                    mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ,
+                            AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent(mSelectedChannel, 0, 0, 2019, 1, 0, req.length(), req));
                     Log.i("RRR", "TL " + req);
                 }
             } else {
@@ -2116,15 +2115,15 @@ public class LiveViewActivity extends SherlockActivity implements ViewSwitcher.V
 //                    (0, 0, 0, 3014, 1, 0, req.length(), req));
 //            Log.d(TAG, "custom command  : " + req);
             req = "custom=1&cmd=3019";
-            mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ, CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent
+            mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent
                     (mSelectedChannel, 0, 0, 3019, 1, 0, req.length(), req));
             Log.d(TAG, "custom command  : " + req);
             req = "custom=1&cmd=2020";
-            mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ, CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent
+            mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent
                     (mSelectedChannel, 0, 0, 2020, 1, 0, req.length(), req));
             Log.d(TAG, "custom command  : " + req);
 //            req = "custom=1&cmd=2021";
-//            mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, CustomCommand.IOTYPE_USER_WIFICMD_REQ, CustomCommand.SMsgAVIoctrlWifiCmdReq.parseContent
+//            mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent
 //                    (mSelectedChannel, 0, 0, 2021, 1, 0, req.length(), req));
 //            Log.d(TAG, "custom command  : " + req);
             mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_IPCAM_GETSTREAMCTRL_REQ,
@@ -2791,7 +2790,7 @@ public class LiveViewActivity extends SherlockActivity implements ViewSwitcher.V
                     }
                     break;
 
-                case CustomCommand.IOTYPE_USER_WIFICMD_RESP:
+                case AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_RESP:
 //                    Toast.makeText(mContext, getString(R.string.setting_ok), Toast.LENGTH_SHORT).show();
                     Log.d(TAG, "IOTYPE_USER_WIFICMD_RESP");
                     Log.d(TAG, "Get WiFi Command Response");

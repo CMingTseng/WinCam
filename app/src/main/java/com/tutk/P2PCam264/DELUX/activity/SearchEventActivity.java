@@ -29,8 +29,8 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.actionbarsherlock.app.SherlockActivity;
-import com.tutk.Kalay.general.R;
-import com.tutk.util.DatabaseManager;
+import com.tutk.P2PCam264.R;
+import com.tutk.P2PCam264.util.DatabaseManager;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

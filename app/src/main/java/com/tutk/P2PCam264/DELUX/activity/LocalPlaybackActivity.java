@@ -27,7 +27,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.actionbarsherlock.app.SherlockActivity;
-import com.tutk.Kalay.general.R;
+import com.tutk.P2PCam264.R;
 
 import java.io.File;
 import java.util.ArrayList;

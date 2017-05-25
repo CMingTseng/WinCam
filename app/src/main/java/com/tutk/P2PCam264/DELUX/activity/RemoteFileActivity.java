@@ -11,9 +11,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.fragment.EventListFragment;
 import com.tutk.P2PCam264.DELUX.fragment.PhotoListFragment;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_OkCancle_Dialog;
 
 /**

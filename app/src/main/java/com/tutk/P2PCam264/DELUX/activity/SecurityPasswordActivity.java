@@ -21,11 +21,11 @@ import android.widget.Toast;
 import com.tutk.IOTC.AVIOCTRLDEFs;
 import com.tutk.IOTC.Camera;
 import com.tutk.IOTC.IRegisterIOTCListener;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.structure.DeviceInfo;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_Ok_Dialog;
-import com.tutk.util.DatabaseManager;
+import com.tutk.P2PCam264.util.DatabaseManager;
 
 import java.util.Timer;
 import java.util.TimerTask;

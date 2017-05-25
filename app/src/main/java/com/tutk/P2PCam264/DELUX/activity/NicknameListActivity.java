@@ -16,8 +16,8 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.structure.DeviceInfo;
+import com.tutk.P2PCam264.R;
 
 import java.io.File;
 

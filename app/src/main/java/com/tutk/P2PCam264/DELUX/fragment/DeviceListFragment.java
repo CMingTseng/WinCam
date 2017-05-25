@@ -22,15 +22,15 @@ import android.widget.TextView;
 
 import com.tutk.IOTC.AVIOCTRLDEFs;
 import com.tutk.IOTC.Camera;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.activity.EditDeviceActivity;
 import com.tutk.P2PCam264.DELUX.activity.LiveViewActivity;
 import com.tutk.P2PCam264.DELUX.activity.MultiViewActivity;
 import com.tutk.P2PCam264.DELUX.activity.qr_codeActivity;
 import com.tutk.P2PCam264.DELUX.structure.DeviceInfo;
 import com.tutk.P2PCam264.MyCamera;
-import com.tutk.util.DatabaseManager;
-import com.tutk.util.ThreadTPNS;
+import com.tutk.P2PCam264.R;
+import com.tutk.P2PCam264.util.DatabaseManager;
+import com.tutk.P2PCam264.util.ThreadTPNS;
 
 import java.io.File;
 import java.util.ArrayList;

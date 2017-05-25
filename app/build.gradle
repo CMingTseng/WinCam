@@ -2,27 +2,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion 16
+    compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 22
+        applicationId = "tw.haotek.app.WinCam"
+        versionCode 1
+        versionName = "1.0.15"
     }
-    productFlavors {
-        Kalay_Car {
-            applicationId = "tw.haotek.app.WinCam"
-            versionCode 1
-            versionName = "1.0.15"
-        }
-    }
-
-    packagingOptions {
-        pickFirst 'META-INF/LICENSE.txt'
-        pickFirst 'META-INF/NOTICE.txt'
-        pickFirst 'META-INF/LICENSE'
-        pickFirst 'META-INF/NOTICE'
-    }
-
     lintOptions {
         checkReleaseBuilds false
     }
@@ -31,42 +19,56 @@ android {
 
         debug {
             minifyEnabled false
-            zipAlignEnabled true
-            shrinkResources true
+            zipAlignEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         release {
-            minifyEnabled false
+            minifyEnabled true
             zipAlignEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
 
-            applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        def fileName = "WinCam_${variant.productFlavors[0].versionName}.apk"
-                        output.outputFile = new File(outputFile.parent, fileName)
-                    }
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    def fileName = "WinCam_${variant.versionName}.apk"
+                    output.outputFile = new File(outputFile.parent, fileName)
                 }
             }
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
-    compile 'com.squareup.picasso:picasso:+'
-    compile 'com.squareup.okhttp:okhttp-urlconnection:+'
-    compile 'com.loopj.android:android-async-http:1.4.9'
-//    compile 'com.squareup.okhttp:okhttp:+'
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile('com.crashlytics.sdk.android:crashlytics:2.4.0@aar') {
+        transitive = true;
+    }
+    compile 'com.android.support:support-v4:25.3.1'
     compile 'com.actionbarsherlock:actionbarsherlock:0.0.1'
     compile 'com.viewpagerindicator:viewpagerindicator:0.0.1'
     compile 'com.slidingmenu:slidingmenu:0.0.1'
     compile 'com.androidwheel:androidwheel:0.0.1'
-    compile('com.crashlytics.sdk.android:crashlytics:2.4.0@aar') {
-        transitive = true;
-    }
+    compile 'com.squareup.picasso:picasso:+'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:+'
+    compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.google.android.gms:play-services-gcm:8.1.0'
 }

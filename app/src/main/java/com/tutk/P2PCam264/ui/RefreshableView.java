@@ -18,7 +18,8 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.tutk.Kalay.general.R;
+import com.tutk.P2PCam264.R;
+
 
 /**
  * @author guolin

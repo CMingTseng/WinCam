@@ -33,9 +33,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
-import com.tutk.Kalay.general.R;
 import com.tutk.Logger.Glog;
 import com.tutk.P2PCam264.DELUX.structure.VideoFile;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_OkCancle_Dialog;
 
 import java.io.File;
@@ -117,7 +117,7 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
         btnEdit.setTextColor(Color.WHITE);
         btnEdit.setVisibility(View.VISIBLE);
         btn_change_mode.setVisibility(View.VISIBLE);
-        btnPhoto.setBackgroundResource(drawable.btn_tabl_h);
+        btnPhoto.setBackgroundResource(R.drawable.btn_tabl_h);
         btnPhoto.setTextColor(Color.BLACK);
 
         btnEdit.setOnClickListener(btnEditClick);
@@ -161,7 +161,7 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
         } else {
             lvChannel.setVisibility(View.GONE);
             layoutNull.setVisibility(View.VISIBLE);
-            imgNull.setBackgroundResource(drawable.ic_noimage);
+            imgNull.setBackgroundResource(R.drawable.ic_noimage);
             txtNull.setText(getText(R.string.txt_no_photos));
         }
 
@@ -695,13 +695,13 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
                 setVideoData();
             }
 
-            btnPhoto.setBackgroundResource(drawable.btn_photo);
+            btnPhoto.setBackgroundResource(R.drawable.btn_photo);
             try {
-                btnPhoto.setTextColor(ColorStateList.createFromXml(getResources(), getResources().getXml(drawable.txt_color_gallery)));
+                btnPhoto.setTextColor(ColorStateList.createFromXml(getResources(), getResources().getXml(R.drawable.txt_color_gallery)));
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            btnVideo.setBackgroundResource(drawable.btn_tabr_h);
+            btnVideo.setBackgroundResource(R.drawable.btn_tabr_h);
             btnVideo.setTextColor(Color.BLACK);
 
             boolean hasFile = false;
@@ -717,7 +717,7 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
             } else {
                 lvChannel.setVisibility(View.GONE);
                 layoutNull.setVisibility(View.VISIBLE);
-                imgNull.setBackgroundResource(drawable.ic_novideo);
+                imgNull.setBackgroundResource(R.drawable.ic_novideo);
                 txtNull.setText(getText(R.string.txt_no_videos));
             }
 
@@ -727,13 +727,13 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
                 setPhotoData();
             }
 
-            btnVideo.setBackgroundResource(drawable.btn_video);
+            btnVideo.setBackgroundResource(R.drawable.btn_video);
             try {
-                btnVideo.setTextColor(ColorStateList.createFromXml(getResources(), getResources().getXml(drawable.txt_color_gallery)));
+                btnVideo.setTextColor(ColorStateList.createFromXml(getResources(), getResources().getXml(R.drawable.txt_color_gallery)));
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            btnPhoto.setBackgroundResource(drawable.btn_tabl_h);
+            btnPhoto.setBackgroundResource(R.drawable.btn_tabl_h);
             btnPhoto.setTextColor(Color.BLACK);
 
             removeCorruptImage();
@@ -751,7 +751,7 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
             } else {
                 lvChannel.setVisibility(View.GONE);
                 layoutNull.setVisibility(View.VISIBLE);
-                imgNull.setBackgroundResource(drawable.ic_noimage);
+                imgNull.setBackgroundResource(R.drawable.ic_noimage);
                 txtNull.setText(getText(R.string.txt_no_photos));
             }
 
@@ -867,7 +867,7 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
                         } else {
                             lvChannel.setVisibility(View.GONE);
                             layoutNull.setVisibility(View.VISIBLE);
-                            imgNull.setBackgroundResource(drawable.ic_noimage);
+                            imgNull.setBackgroundResource(R.drawable.ic_noimage);
                             txtNull.setText(getText(R.string.txt_no_photos));
                         }
 
@@ -903,7 +903,7 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
                         } else {
                             lvChannel.setVisibility(View.GONE);
                             layoutNull.setVisibility(View.VISIBLE);
-                            imgNull.setBackgroundResource(drawable.ic_novideo);
+                            imgNull.setBackgroundResource(R.drawable.ic_novideo);
                             txtNull.setText(getText(R.string.txt_no_videos));
                         }
 
@@ -945,7 +945,7 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
                 } else {
                     lvChannel.setVisibility(View.GONE);
                     layoutNull.setVisibility(View.VISIBLE);
-                    imgNull.setBackgroundResource(drawable.ic_noimage);
+                    imgNull.setBackgroundResource(R.drawable.ic_noimage);
                     txtNull.setText(getText(R.string.txt_no_photos));
                 }
             } else {
@@ -981,7 +981,7 @@ public class GridViewGalleryActivity extends SherlockActivity implements Custom_
                 } else {
                     lvChannel.setVisibility(View.GONE);
                     layoutNull.setVisibility(View.VISIBLE);
-                    imgNull.setBackgroundResource(drawable.ic_novideo);
+                    imgNull.setBackgroundResource(R.drawable.ic_novideo);
                     txtNull.setText(getText(R.string.txt_no_videos));
                 }
             }

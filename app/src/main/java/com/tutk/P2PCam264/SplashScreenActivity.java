@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Window;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.activity.MultiViewActivity;
 
 public class SplashScreenActivity extends SherlockActivity {

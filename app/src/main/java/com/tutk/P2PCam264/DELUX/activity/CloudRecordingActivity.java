@@ -6,7 +6,8 @@ import android.view.KeyEvent;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
-import com.tutk.Kalay.general.R;
+import com.tutk.P2PCam264.R;
+
 
 /**
  * Created by James Huang on 2015/4/3.

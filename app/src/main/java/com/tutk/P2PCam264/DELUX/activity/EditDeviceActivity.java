@@ -39,13 +39,13 @@ import com.tutk.IOTC.AVIOCTRLDEFs;
 import com.tutk.IOTC.Camera;
 import com.tutk.IOTC.IRegisterIOTCListener;
 import com.tutk.IOTC.Packet;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.DELUX.structure.DeviceInfo;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 import com.tutk.P2PCam264.ui.Custom_OkCancle_Dialog;
 import com.tutk.P2PCam264.ui.Custom_Ok_Dialog;
-import com.tutk.util.Convert;
-import com.tutk.util.DatabaseManager;
+import com.tutk.P2PCam264.util.Convert;
+import com.tutk.P2PCam264.util.DatabaseManager;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -361,7 +361,7 @@ public class EditDeviceActivity extends Activity implements IRegisterIOTCListene
                 if (gvalue < 4) {
                     gsensors.setSelection(gvalue);
                 }
-                if (gvalue != gsensors.getSelectedItem()) {
+                if (gvalue != (int) gsensors.getSelectedItem()) {
                     Log.d(TAG, "sel change : " + gsensors.getSelectedItem());
                     mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL, AVIOCTRLDEFs.IOTYPE_USER_WIFICMD_REQ, AVIOCTRLDEFs.SMsgAVIoctrlWifiCmdReq.parseContent
                             (0, 0, 0, 2011, 1, 0, req.length(), req));

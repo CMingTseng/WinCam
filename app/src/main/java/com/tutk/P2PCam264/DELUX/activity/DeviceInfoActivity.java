@@ -11,8 +11,8 @@ import com.tutk.IOTC.AVIOCTRLDEFs;
 import com.tutk.IOTC.Camera;
 import com.tutk.IOTC.IRegisterIOTCListener;
 import com.tutk.IOTC.Packet;
-import com.tutk.Kalay.general.R;
 import com.tutk.P2PCam264.MyCamera;
+import com.tutk.P2PCam264.R;
 
 public class DeviceInfoActivity extends Activity implements IRegisterIOTCListener {
 
